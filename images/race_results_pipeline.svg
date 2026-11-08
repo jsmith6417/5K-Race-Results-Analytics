@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 930" width="100%" role="img" aria-labelledby="racePipelineTitle racePipelineDesc">
+  <title id="racePipelineTitle">5K@ADA and 5K@EASD race results data pipeline</title>
+  <desc id="racePipelineDesc">Separate 5K@ADA and 5K@EASD paths each gather results with a Python program, pause for inspection and verification, clean results with a separate Python program, and pause for another inspection and verification. The two paths then merge into one combined dataset prepared by Python and finally a Tableau visualization.</desc>
+  <defs>
+    <style>
+      .rp-heading { font: 700 29px Arial,Helvetica,sans-serif; fill: #1f2d3d; text-anchor: middle; }
+      .rp-title { font: 700 25px Arial,Helvetica,sans-serif; fill: #183e59; text-anchor: middle; }
+      .rp-sub { font: 400 18px Arial,Helvetica,sans-serif; fill: #516274; text-anchor: middle; }
+      .rp-check { font: 700 21px Arial,Helvetica,sans-serif; fill: #255c43; text-anchor: middle; }
+      .rp-final { font: 700 27px Arial,Helvetica,sans-serif; fill: #ffffff; text-anchor: middle; }
+      .rp-finalsub { font: 400 19px Arial,Helvetica,sans-serif; fill: #edf7ff; text-anchor: middle; }
+      .rp-flow { stroke: #77899c; stroke-width: 3; fill:none; stroke-linecap:round; stroke-linejoin:round; }
+    </style>
+    <marker id="rp-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L10 5 L0 10 Z" fill="#77899c"/></marker>
+  </defs>
+
+  <!-- Two race tracks -->
+  <rect x="35" y="24" width="500" height="580" rx="22" fill="#f7fafd" stroke="#e0e8ee" stroke-width="2"/>
+  <rect x="565" y="24" width="500" height="580" rx="22" fill="#f7fafd" stroke="#e0e8ee" stroke-width="2"/>
+  <text x="285" y="72" class="rp-heading">5K@ADA</text>
+  <text x="815" y="72" class="rp-heading">5K@EASD</text>
+
+  <!-- Gather stage -->
+  <rect x="80" y="105" width="410" height="90" rx="14" fill="#e4f2fc" stroke="#a8d0ec" stroke-width="2"/>
+  <rect x="610" y="105" width="410" height="90" rx="14" fill="#e4f2fc" stroke="#a8d0ec" stroke-width="2"/>
+  <text x="285" y="144" class="rp-title">Gather results</text>
+  <text x="285" y="172" class="rp-sub">Python program</text>
+  <text x="815" y="144" class="rp-title">Gather results</text>
+  <text x="815" y="172" class="rp-sub">Python program</text>
+  <path class="rp-flow" d="M285 195 V224" marker-end="url(#rp-arrow)"/>
+  <path class="rp-flow" d="M815 195 V224" marker-end="url(#rp-arrow)"/>
+
+  <!-- Validation after download -->
+  <rect x="80" y="234" width="410" height="64" rx="12" fill="#eef8f1" stroke="#b7dec6" stroke-width="2"/>
+  <rect x="610" y="234" width="410" height="64" rx="12" fill="#eef8f1" stroke="#b7dec6" stroke-width="2"/>
+  <circle cx="139" cy="266" r="17" fill="#2c8158"/><path d="M130 266 l6 6 12 -14" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="669" cy="266" r="17" fill="#2c8158"/><path d="M660 266 l6 6 12 -14" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="303" y="274" class="rp-check">Inspect and verify</text>
+  <text x="833" y="274" class="rp-check">Inspect and verify</text>
+  <path class="rp-flow" d="M285 298 V327" marker-end="url(#rp-arrow)"/>
+  <path class="rp-flow" d="M815 298 V327" marker-end="url(#rp-arrow)"/>
+
+  <!-- Cleaning stage -->
+  <rect x="80" y="337" width="410" height="90" rx="14" fill="#e4f2fc" stroke="#a8d0ec" stroke-width="2"/>
+  <rect x="610" y="337" width="410" height="90" rx="14" fill="#e4f2fc" stroke="#a8d0ec" stroke-width="2"/>
+  <text x="285" y="376" class="rp-title">Clean results</text>
+  <text x="285" y="404" class="rp-sub">Python program</text>
+  <text x="815" y="376" class="rp-title">Clean results</text>
+  <text x="815" y="404" class="rp-sub">Python program</text>
+  <path class="rp-flow" d="M285 427 V456" marker-end="url(#rp-arrow)"/>
+  <path class="rp-flow" d="M815 427 V456" marker-end="url(#rp-arrow)"/>
+
+  <!-- Validation after cleaning -->
+  <rect x="80" y="466" width="410" height="64" rx="12" fill="#eef8f1" stroke="#b7dec6" stroke-width="2"/>
+  <rect x="610" y="466" width="410" height="64" rx="12" fill="#eef8f1" stroke="#b7dec6" stroke-width="2"/>
+  <circle cx="139" cy="498" r="17" fill="#2c8158"/><path d="M130 498 l6 6 12 -14" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="669" cy="498" r="17" fill="#2c8158"/><path d="M660 498 l6 6 12 -14" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="303" y="506" class="rp-check">Inspect and verify</text>
+  <text x="833" y="506" class="rp-check">Inspect and verify</text>
+
+  <!-- Branches join the common pipeline -->
+  <path class="rp-flow" d="M285 530 V586 H550 V639" marker-end="url(#rp-arrow)"/>
+  <path class="rp-flow" d="M815 530 V586 H550"/>
+  <circle cx="550" cy="586" r="5" fill="#77899c"/>
+
+  <!-- Combine stage -->
+  <rect x="280" y="649" width="540" height="96" rx="16" fill="#e4f2fc" stroke="#a8d0ec" stroke-width="2"/>
+  <text x="550" y="689" class="rp-title">Combine datasets</text>
+  <text x="550" y="722" class="rp-sub">Python program · Common structure and time format</text>
+  <path class="rp-flow" d="M550 745 V787" marker-end="url(#rp-arrow)"/>
+
+  <!-- Final Tableau stage -->
+  <rect x="280" y="797" width="540" height="104" rx="16" fill="#005b9c"/>
+  <text x="550" y="840" class="rp-final">Tableau visualization</text>
+  <text x="550" y="872" class="rp-finalsub">Comparative analysis across both races</text>
+</svg>
