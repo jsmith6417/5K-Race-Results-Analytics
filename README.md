@@ -109,7 +109,7 @@ The combined 2026 results support interactive views of participation by country,
 
 The companion article explains the evolution of the projects, improvements to data gathering and cleaning, and the rationale for retaining separate processing stages.
 
-[**Read the Article at JCS Analytics**]([https://public.tableau.com/views/5KADAEASDResults/20265KADAand5KEASDRaceResults](https://jcsanalytics.com/index.php/articles/automation-and-workflows/improving-the-5k-ada-and-5k-easd-data-pipeline-automation-validation-and-visualization)
+[**Read the Article at JCS Analytics**](https://jcsanalytics.com/index.php/articles/automation-and-workflows/improving-the-5k-ada-and-5k-easd-data-pipeline-automation-validation-and-visualization)
 
 ## Scope and Notes
 
