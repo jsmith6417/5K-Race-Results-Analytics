@@ -117,6 +117,12 @@ This repository focuses on the **2026** results from both races. Earlier analyse
 
 The programs depend on third-party race-result services. Changes to their fields, response formats, or availability may require code updates.
 
+## Feedback
+
+If you explore the 5K race results, I’d like to hear what you found useful, what was unclear, or what you’d like to see in a future analysis.
+
+To share feedback or report a problem, open the repository’s **Issues** tab, select **New issue**, and choose **Feedback or bug report**.
+
 ## License
 
 Source code in this repository is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
